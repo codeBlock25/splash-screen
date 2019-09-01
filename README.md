@@ -5,7 +5,7 @@ This is a simple E-commerce splash screen i.e a load screen which would be displ
 Gravit designer
 
 # site
-```https://e-commerce-splash.netlify.com ```
+```https://e-commerce-splash-screen.netlify.com ```
 
 # Author
 Daniel Amos
