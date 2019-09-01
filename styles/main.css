@@ -1,0 +1,235 @@
+* {  
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* font-family: 'Roboto Mono', monospace;
+font-family: 'Courgette', cursive;
+font-family: 'Montserrat', sans-serif; 
+font-family: 'Sacramento', cursive;
+font-family: 'Italiana', serif; */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    overflow-y: auto;
+    background: #dedede;
+}
+.loader {
+    width: 100vw;
+    height: 100vh;
+    min-width: 300px;
+    min-height: 500px;
+    display: block;
+    background-image: url('../assets/bg2.png');
+    background-size: cover;
+}
+@-webkit-keyframes animate_drop {
+    from {
+        top: -400%;
+    }
+    to {
+        top: 0
+    }
+}
+@-moz-keyframes animate_drop {
+    from {
+        top: -400%;
+    }
+    to {
+        top: 0
+    }
+}
+@keyframes animate_drop {
+    from {
+        top: -400%;
+    }
+    to {
+        top: 0
+    }
+}
+@-webkit-keyframes animate_move {
+    0% {
+        left: -15px;
+        transform: rotate(-10deg)
+    }
+    50% {
+        left: 15px;
+        transform: rotate(0deg)
+    }
+    100% {
+        left: -15px;
+        transform: rotate(-10deg)
+    }
+}
+@-moz-keyframes animate_move {
+    0% {
+        left: -15px;
+        transform: rotate(-10deg)
+    }
+    50% {
+        left: 15px;
+        transform: rotate(0deg)
+    }
+    100% {
+        left: -15px;
+        transform: rotate(-10deg)
+    }
+}
+@keyframes animate_move {
+    0% {
+        left: -15px;
+        transform: rotate(-10deg)
+    }
+    50% {
+        left: 15px;
+        transform: rotate(0deg)
+    }
+    100% {
+        left: -15px;
+        transform: rotate(-10deg)
+    }
+}
+.loader .cart {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+.loader .cart svg {
+    position: absolute;
+    top: -400%;
+    left: 0;
+    width: 80%;
+    display: block;
+    animation: animate_drop 1s ease-in 1s 1 normal forwards
+                ,animate_move 1s ease-out 2.5s infinite normal forwards;
+}
+@-webkit-keyframes animate_ride {
+    to {
+        left: 500%;
+    }
+}
+@-moz-keyframes animate_ride {
+    to {
+        left: 500%;
+    }
+}
+@keyframes animate_ride {
+    to {
+        left: 500%;
+    }
+}
+.loader.done .cart svg {
+    top: 0;
+    animation: animate_move 1s ease-out 2 normal forwards,
+    animate_ride 1s ease-in 1 normal forwards;
+}
+@keyframes animate_dim {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.loader .txt {
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 200px;
+    height: 30%;
+    min-height: 70px;
+    max-height: 100px;
+    display: block;
+    overflow: hidden;
+}
+.loader.done .txt {
+    animation: animate_dim .8s ease-in 1.5s 1 normal forwards;
+}
+@-webkit-keyframes animate_slide {
+    from {
+        left: -200%;
+    }
+    to {
+        left: 0;
+    }
+}
+@-moz-keyframes animate_slide {
+    from {
+        left: -200%;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes animate_slide {
+    from {
+        left: -200%;
+    }
+    to {
+        left: 0;
+    }
+}
+.loader .txt h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    line-height: 50px;
+    display: block;
+    font-size: 50px;
+    font-family: 'Sacramento', cursive;
+    font-weight: 500;
+    animation: animate_slide 1.5s ease-in 1 normal forwards;
+}
+@-webkit-keyframes animate_rise {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes animate_rise {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes animate_rise {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.loader .txt p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    line-height: 50px;
+    display: block;
+    font-size: 20px;
+    font-family: 'Italiana', serif;
+    opacity: 0;
+    animation: animate_rise 2s ease-in 2s 1 normal forwards;
+}
