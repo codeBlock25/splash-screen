@@ -8,4 +8,4 @@ Gravit designer
 ```https://e-commerce-splash-screen.netlify.com ```
 
 # Author
-Daniel Amos
+with love for Design and all things dev Daniel Amos
